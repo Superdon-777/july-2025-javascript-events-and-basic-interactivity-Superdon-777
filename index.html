@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donie Paul - Responsive CSS Layouts</title>
+  <meta name="description" content="Responsive portfolio page demonstrating Flexbox and Grid layouts." />
+  <meta name="author" content="Donie Paul" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Donie Paul’s Responsive Portfolio</h1>
+    <p>Demonstrating Flexbox, CSS Grid and Responsive Design.</p>
+    <p id="welcomeMsg">Hello, welcome to my portfolio!</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about" tabindex="1">About</a></li>
+      <li><a href="#features" tabindex="2">Features</a></li>
+      <li><a href="#gallery" tabindex="3">Gallery</a></li>
+      <li><a href="#form" tabindex="4">Sign In</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <main>
+      <section id="about">
+        <h2>About This Page</h2>
+        <p>This responsive page builds on previous CSS fundamentals with a focus on Flexbox and Grid:</p>
+        <ul>
+          <li>Semantic HTML5 with responsive layouts</li>
+          <li>Flexbox for navigation alignment</li>
+          <li>CSS Grid for main content and sidebar</li>
+          <li>Media queries for multi-device adaptability</li>
+        </ul>
+      </section>
+      <section id="features">
+        <h2>Key Layout Features</h2>
+        <ol>
+          <li>Navigation aligned using Flexbox</li>
+          <li>Main content and sidebar organized with CSS Grid</li>
+          <li>Responsive breakpoints for smartphone & desktop</li>
+          <li>Clean, maintainable CSS structure</li>
+        </ol>
+      </section>
+      <section id="gallery" aria-label="Image gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <figure>
+            <img src="https://images.pexels.com/photos/72161/pexels-photo-72161.jpeg?auto=compress&w=600&fit=crop" alt="Spring" />
+            <figcaption>Spring</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.pexels.com/photos/189848/pexels-photo-189848.jpeg?auto=compress&w=600&fit=crop" alt="Summer" />
+            <figcaption>Summer</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.pexels.com/photos/1477199/pexels-photo-1477199.jpeg?auto=compress&w=600&fit=crop" alt="Autumn" />
+            <figcaption>Autumn</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.pexels.com/photos/1643773/pexels-photo-1643773.jpeg?auto=compress&w=600&fit=crop" alt="Winter" />
+            <figcaption>Winter</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <aside>
+      <section id="sidebar">
+        <h2>Sidebar</h2>
+        <p>👉🏽This sidebar uses CSS Grid placement and adjusts visibility on smaller screens.</p>
+        <ul>
+          <li>Responsive design principles</li>
+          <li>CSS Grid area management</li>
+          <li>Adaptable for different content</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+  <section id="form">
+    <h2>Sign In</h2>
+    <form action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Donie Paul" required minlength="3" autocomplete="name" />
+        
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="doniepaul@example.com" required autocomplete="email" />
+      </fieldset>
+      <fieldset>
+        <legend>Account Info</legend>
+        <label for="username">Username *</label>
+        <input type="text" id="username" name="username" placeholder="donie2025" required minlength="5" pattern="^[a-zA-Z0-9_-]{5,15}$" title="5-15 letters, numbers, underscore or hyphen" autocomplete="username" />
+        
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" placeholder="***" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must include uppercase, lowercase, and number" autocomplete="new-password" />
+      </fieldset>
+      <button type="button" id="changeTextBtn">Change Welcome Text</button>
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+  </section>
+  <footer>
+    <p>© 2025 Donie Paul – Basic Java Layouts Wk5</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
